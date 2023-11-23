@@ -3,3 +3,21 @@
  * Date:
  * Name:
  */
+#include <iostream>
+
+using namespace std;
+
+void printNumbers(int A, int B) {
+    if (A > B) {
+        printNumbers(B, A);
+        return;
+    }
+
+    if (A == B) {
+        cout << A << endl;
+        return;
+    }
+
+    cout << A << " ";
+    printNumbers(A + 1, B);
+}
